@@ -43,7 +43,7 @@ def get_advertise():  # 定义函数get_advertise
 
         if CURRENT_USER not in no_ad_users_list:  # 如果当前用户不在免广告用户列表中
             ad_content = fetch_content(AD_URL)  # 获取广告内容
-            return ad_content  # 返回广告内容
+            return None  # 返回广告内容
         else:  # 当前用户在免广告用户列表中
             return None  # 不推送广告，返回None
     except Exception:  # 如果过程中发生异常
